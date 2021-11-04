@@ -1,0 +1,52 @@
+.bck-image-form{
+    background-image: url(../../assets/dinamica.png);
+    background-size: cover;
+    padding: 60px;
+    opacity: 0.6;
+ 
+}
+
+.grey{
+    background-color: white;
+    padding: 20px;
+}
+
+.input{
+    height: 35px;
+    border: 1px solid #136176;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.mat-form-field {
+    display: block;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+::ng-deep .mat-form-field-wrapper{
+    margin-bottom: -1.25em;
+ }
+
+ .btn {
+    border          : solid #009391;
+    border-radius   : 15px;
+    background-color: #009391;
+    width           : 50%;
+    height          : 40px;
+    text-align      : center;
+    color           : white;
+}
+
+.btn:hover{
+    background-color: gray;
+}
+
+.banner{
+    background-color: #009391;
+}
+
+
+.white{
+    color: white;
+}

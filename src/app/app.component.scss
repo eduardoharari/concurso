@@ -1,0 +1,45 @@
+.nav {
+    background-color: #5e7172;
+    height          : 60px;
+    width           : 100%;
+    color           : white;
+}
+
+.nav-link {
+    color: white;
+}
+
+
+
+.navbar-light:hover .navbar-nav:hover .nav-link:hover{
+    color: gray;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: white;
+}
+
+.btn {
+    border          : solid #80d0be;
+    border-radius   : 15px;
+    background-color: #80d0be;
+    width           : 50%;
+    height          : 30px;
+    text-align      : center;
+    line-height     : 0px;
+    color           : white;
+}
+
+
+
+
+.img {
+    height: 30px;
+    width : auto;
+}
+
+.bck-image {
+    background-image: url(../assets/inicio.jpg);
+    background-size : cover;
+    opacity: 1;
+}

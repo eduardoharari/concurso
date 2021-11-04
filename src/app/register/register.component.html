@@ -1,0 +1,189 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 my-5">
+            <h1 style="color: #80d0be;"><strong>¿Qué es lo que necesitas para participar?</strong> </h1>
+        </div>
+
+        <div class="col-3 banner p-4 text-center">
+            <div class="row">
+                <div class="col-2 my-5 white">
+                    <h1>1.</h1>
+                </div>
+                <div class="col-10 my-5 white">
+                    Regístrate con tu
+                    nombre,
+                    correo electrónico y
+                    número telefónico.
+                </div>
+                <div class="col-2 my-5 white">
+                    <h1>2.</h1>
+                </div>
+                <div class="col-10 my-5 white">
+                    Indica en que destino
+                    turístico te gustaría
+                    desarrollar tu proyecto
+                </div>
+                <div class="col-2 my-5 white">
+                    <h1>3.</h1>
+                </div>
+                <div class="col-10 my-5 white">
+                    Sube los documentos
+                    del proyecto
+                </div>
+                <div class="col-2 my-5 white">
+                    <h1>4.</h1>
+                </div>
+                <div class="col-10 my-5 white">
+                    Posteriormente te
+                    contactaremos.
+                </div>
+            </div>
+        </div>
+        <div class="col-9 p-0 bck-image-form">
+            <div class="col-8 offset-2 grey my-5">
+                <form [formGroup]="firstFormGroup" (ngSubmit)="submit()">
+                    <div class="row">
+                        <div class="col-12 text-center p-1">
+                            <h3 style="color: #009391;"><strong>Regístrate</strong></h3>
+                        </div>
+                        <div class="col-6 text-center">
+                            <mat-form-field appearance="fill">
+                                <p style="color: #009391;" class="text-center"><strong>Nombre</strong></p>
+                                <input class="input" matInput formControlName="name" [(ngModel)]="form.name" required>
+                                <div *ngIf="firstFormGroup.controls.name.invalid && (firstFormGroup.controls.name.dirty || firstFormGroup.controls.name.touched)" class="alert alert-danger">
+                                    <div *ngIf="firstFormGroup.controls.name.errors?.required">
+                                        Nombre es requerido
+                                    </div>
+                                </div>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-6 text-center">
+                            <mat-form-field appearance="fill">
+                                <p style="color: #009391;" class="text-center"><strong>Apellidos</strong></p>
+                                <input class="input" matInput formControlName="surname" [(ngModel)]="form.surname" required>
+                                <div *ngIf="firstFormGroup.controls.surname.invalid && (firstFormGroup.controls.surname.dirty || firstFormGroup.controls.surname.touched)" class="alert alert-danger">
+                                    <div *ngIf="firstFormGroup.controls.surname.errors?.required">
+                                        Apellido es requerido
+                                    </div>
+                                </div>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-6 text-center">
+                            <mat-form-field appearance="fill">
+                                <p style="color: #009391;" class="text-center"><strong>Correo electrónico</strong></p>
+                                <input class="input" matInput formControlName="email" [(ngModel)]="form.email" required>
+                                <div *ngIf="firstFormGroup.controls.email.invalid && (firstFormGroup.controls.email.dirty || firstFormGroup.controls.email.touched)" class="alert alert-danger">
+                                    <div *ngIf="firstFormGroup.controls.email.errors?.required">
+                                        Correo incorrecto
+                                    </div>
+                                </div>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-6 text-center">
+                            <mat-form-field appearance="fill">
+                                <p style="color: #009391;" class="text-center"><strong>Número teléfonico</strong></p>
+                                <input class="input" matInput formControlName="phone" [(ngModel)]="form.phone" required>
+                                <div *ngIf="firstFormGroup.controls.phone.invalid && (firstFormGroup.controls.phone.dirty || firstFormGroup.controls.phone.touched)" class="alert alert-danger">
+                                    <div *ngIf="firstFormGroup.controls.phone.errors?.required">
+                                        Minimo 10 digitos
+                                    </div>
+                                </div>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-6 text-center">
+                            <mat-form-field appearance="fill">
+                                <p style="color: #009391;" class="text-center"><strong>Destino turístico</strong></p>
+                                <input class="input" matInput formControlName="turisticLocation"
+                                    [(ngModel)]="form.turisticLocation" required>
+                                    <div *ngIf="firstFormGroup.controls.turisticLocation.invalid && (firstFormGroup.controls.turisticLocation.dirty || firstFormGroup.controls.turisticLocation.touched)" class="alert alert-danger">
+                                        <div *ngIf="firstFormGroup.controls.turisticLocation.errors?.required">
+                                            Minimo 5 caracteres
+                                        </div>
+                                    </div>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-6 text-center mt-2">
+                            <mat-form-field appearance="fill">
+                                <mat-label></mat-label>
+                                <p style="color: #009391;" class="text-center"><strong>Tipo de proyecto</strong></p>
+                                <mat-select [(ngModel)]="form.selected" formControlName="selected">
+                                    <mat-option value="Fondea">Fondea</mat-option>
+                                    <mat-option value="Construye">Construye</mat-option>
+                                    <mat-option value="Remodela">Remodela</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-12 text-center mb-3">
+                            <mat-form-field appearance="fill">
+                                <p style="color: #009391;" class="text-center"><strong>Descripción del proyecto</strong>
+                                </p>
+                                <input class="input" matInput formControlName="description"
+                                    [(ngModel)]="form.description" required>
+                            </mat-form-field>
+                            <div *ngIf="firstFormGroup.controls.description.invalid && (firstFormGroup.controls.description.dirty || firstFormGroup.controls.description.touched)" class="alert alert-danger">
+                                <div *ngIf="firstFormGroup.controls.description.errors?.required">
+                                    Minimo 50 caracteres
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <p style="color: #009391; font-size: 15px;">Sube aquí tus documentos, mientras más
+                                documentos tengas mas rápido será el proceso</p>
+                        </div>
+                        <div class="col-12 mb-2">
+                            <div *ngIf="currentFileUpload" class="progress">
+                                <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar"
+                                    attr.aria-valuenow="{{percentage}}" aria-valuemin="0" aria-valuemax="100"
+                                    [ngStyle]="{width:percentage+'%'}">
+                                    {{percentage}}%</div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <label><strong style="color: #009391;">Proyecto ejecutivo</strong></label>
+                        </div>
+                        <div class="col-8">
+                            <input type="file" (change)="selectFileProyect($event)">
+                        </div>
+                        <div class="col-4">
+                            <label><strong style="color: #009391;">Brochure</strong></label>
+                        </div>
+                        <div class="col-8">
+                            <input type="file" (change)="selectFileBrochure($event)">
+                        </div>
+                        <div class="col-4">
+                            <label><strong style="color: #009391;">Corrida financiera</strong></label>
+                        </div>
+                        <div class="col-8">
+                            <input type="file" (change)="selectFileFinance($event)">
+                        </div>
+                        <div class="col-4">
+                            <label><strong style="color: #009391;">Estudio de mercado</strong></label>
+                        </div>
+                        <div class="col-8">
+                            <input type="file" (change)="selectFileMerc($event)">
+                        </div>
+                        <div class="col-4">
+                            <label><strong style="color: #009391;">Fotos</strong></label>
+                            <label>
+                                <p style="font-size: 10px; color: #009391;">* Sube tus fotos en una carpeta comprimida
+                                </p>
+                            </label>
+                        </div>
+                        <div class="col-8">
+                            <input type="file" (change)="selectFilePhoto($event)">
+                        </div>
+
+                        <div class="text-center my-3">
+                            <button class="btn" style="color: white;" type="submit" value="Submit"
+                                (click)="upload()"><strong>Regístrate</strong></button>
+                        </div>
+                        <div class="col-12 text-center" *ngIf="submitted == true">
+                            <h5 style="color: #009391;">Se ha registrado correctamente, nos pondremos en contacto con usted a la brevedad</h5>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <h3 style="color: black;" class="my-4 text-center">Si tienes alguna duda contáctanos al correo <a
+                href="mailto:solicitantes@monific.com" style="color: black;">solicitantes@monific.com</a></h3>
+    </div>
