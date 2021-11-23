@@ -1,8 +1,7 @@
-
 .btn {
-    border          : solid #80d0be;
+    border          : solid #ff7a00;
     border-radius   : 15px;
-    background-color: #80d0be;
+    background-color: #ff7a00;
     width           : 190px;
     height          : 45px;
     text-align      : center;
@@ -14,11 +13,37 @@
     background-color: whitesmoke;
 }
 
-.vl {
-    border-left: 6px solid #80d0be;
-    height     : 476px;
+.padleft0 {
+    padding-left: 0;
 }
 
-.padleft0{
-    padding-left: 0;
+
+.img-fluid {
+    object-fit: cover;
+    height    : 100%;
+}
+
+.banner {
+    background-color: #ff7a00;
+}
+
+.fondeo {
+    width    : 100%;
+    max-width: 150px;
+    height   : auto;
+}
+
+.imgjoin{
+    width    : 100%;
+    max-height   : 180px;
+}
+
+.imgPart{
+    width: 100%;
+    max-width: 155px;
+    height   : auto;
+}
+
+.banner {
+    background-color: #ff7a00;
 }

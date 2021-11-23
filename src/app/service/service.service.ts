@@ -129,7 +129,7 @@ export class ServiceService {
   }
 
   pushFileToStoragePhoto(fileUpload: Upload, name:any, surname: any): Observable<any> {
-    const filePath = `${name + surname}/${this.basePathPhoto}npm /${fileUpload.file.name}`; 
+    const filePath = `${name + surname}/${this.basePathPhoto}/${fileUpload.file.name}`; 
     const storageRef = this.storage.ref(filePath);
     const uploadTask = this.storage.upload(filePath, fileUpload.file);
 
@@ -137,6 +137,24 @@ export class ServiceService {
       finalize(() => {
         storageRef.getDownloadURL().subscribe(downloadURL => {
           console.log('File available at', downloadURL);
+          fileUpload.url = downloadURL;
+          fileUpload.name = fileUpload.file.name;
+          this.saveFileData(fileUpload);
+        });
+      })
+    ).subscribe();
+
+    return uploadTask.percentageChanges();
+  }
+  
+  pushFileToStoragePlan(fileUpload: Upload, name:any, surname: any): Observable<any> {
+    const filePath = `${name + surname}/${this.basePathPhoto}/${fileUpload.file.name}`; 
+    const storageRef = this.storage.ref(filePath);
+    const uploadTask = this.storage.upload(filePath, fileUpload.file);
+
+    uploadTask.snapshotChanges().pipe(
+      finalize(() => {
+        storageRef.getDownloadURL().subscribe(downloadURL => {
           fileUpload.url = downloadURL;
           fileUpload.name = fileUpload.file.name;
           this.saveFileData(fileUpload);

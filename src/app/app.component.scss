@@ -1,8 +1,5 @@
 .nav {
-    background-color: #5e7172;
-    height          : 60px;
-    width           : 100%;
-    color           : white;
+    background-color: #136176;
 }
 
 .nav-link {
@@ -20,14 +17,19 @@
 }
 
 .btn {
-    border          : solid #80d0be;
+    border          : solid #ff7a00;
     border-radius   : 15px;
-    background-color: #80d0be;
-    width           : 50%;
-    height          : 30px;
+    background-color: #ff7a00;
+    width           : 85%;
+    height          : 45px;
     text-align      : center;
     line-height     : 0px;
     color           : white;
+}
+.btn:hover{
+    background-color: #136176;
+    border          : solid #136176;
+    color: #ff7a00;
 }
 
 
@@ -40,6 +42,26 @@
 
 .bck-image {
     background-image: url(../assets/inicio.jpg);
-    background-size : cover;
+    height: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+.moni{
+    width: auto;
+    height: 60px;
+}
+
+.inmo{
+    width: auto;
+    height: 50px;
+    margin-top: 54px;
+}
+
+.line{
+    border: 2px solid #ff7a00;
     opacity: 1;
+    width: 40%;
 }

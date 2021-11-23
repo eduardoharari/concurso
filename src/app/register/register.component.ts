@@ -40,6 +40,7 @@ export class RegisterComponent implements OnInit {
   selectedFilesMerc!: FileList;
   selectedFilesPhoto!: FileList;
   selectedFilesProyect!: FileList;
+  selectedFilesPlan!: FileList;
   currentFileUpload!: Upload;
   percentage!: number;
   fileUploads: any[];
@@ -94,6 +95,9 @@ export class RegisterComponent implements OnInit {
   }
   selectFilePhoto(event: any) {
     this.selectedFilesPhoto = event.target.files;
+  }
+  selectFilePlan(event: any) {
+    this.selectedFilesPlan = event.target.files;
   }
 
 
@@ -156,6 +160,19 @@ export class RegisterComponent implements OnInit {
 
         this.currentFileUpload = new Upload(file);
         this.service.pushFileToStoragePhoto(this.currentFileUpload, this.form.name, this.form.surname).subscribe(
+          percentage => {
+            this.percentage = Math.round(percentage);
+          },
+          error => {
+            console.log(error);
+          }
+        );
+      }
+      if (this.selectedFilesPlan != null) {
+        const file = this.selectedFilesPlan.item(0) as File;
+
+        this.currentFileUpload = new Upload(file);
+        this.service.pushFileToStoragePlan(this.currentFileUpload, this.form.name, this.form.surname).subscribe(
           percentage => {
             this.percentage = Math.round(percentage);
           },

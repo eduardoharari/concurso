@@ -1,54 +1,79 @@
-<div class="container">
+<div class="container p-0">
     <div class="row">
-        <div class="col-12 my-5">
-            <h1 style="color: #80d0be;"><strong>¿Qué es lo que necesitas para participar?</strong> </h1>
+        <div class="col-12 text-center">
+            <h3 style="color: #136176; margin-top: 100px; margin-bottom: 100px;"><strong>Proceso de registro</strong>
+            </h3>
         </div>
-
-        <div class="col-3 banner p-4 text-center">
-            <div class="row">
-                <div class="col-2 my-5 white">
-                    <h1>1.</h1>
+        <div class="col-12 banner text-center ">
+            <div class="row my-5">
+                <div class="col-md-3 col-12 my-md-0 my-3">
+                    <div class="col-12">
+                        <img src="assets/registronombre.png" width="90px" alt="">
+                    </div>
+                    <div class="col-12">
+                        <h1 style="font-size: 80px; color: white;"><strong> > </strong></h1>
+                    </div>
+                    <div class="col-12">
+                        <h5 style="color: white;">1. Regístrate con tu nombre,
+                            correo electrónico y número
+                            telefónico.
+                        </h5>
+                    </div>
                 </div>
-                <div class="col-10 my-5 white">
-                    Regístrate con tu
-                    nombre,
-                    correo electrónico y
-                    número telefónico.
+                <div class="col-md-3 col-12 my-md-0 my-3">
+                    <div class="col-12">
+                        <img src="assets/indicadestino.png" width="90px" alt="">
+                    </div>
+                    <div class="col-12">
+                        <h1 style="font-size: 80px; color: white;"><strong> > </strong></h1>
+                    </div>
+                    <div class="col-12">
+                        <h5 style="color: white;">2. Indica en que destino
+                            turístico se encuentra o te
+                            gustaría desarrollar tu
+                            proyecto.
+                        </h5>
+                    </div>
                 </div>
-                <div class="col-2 my-5 white">
-                    <h1>2.</h1>
+                <div class="col-md-3 col-12 my-md-0 my-3">
+                    <div class="col-12">
+                        <img src="assets/subedocumentos.png" width="90px" alt="">
+                    </div>
+                    <div class="col-12">
+                        <h1 style="font-size: 80px; color: white;"><strong> > </strong></h1>
+                    </div>
+                    <div class="col-12">
+                        <h5 style="color: white;">3. Sube los documentos del
+                            proyecto.
+                        </h5>
+                    </div>
                 </div>
-                <div class="col-10 my-5 white">
-                    Indica en que destino
-                    turístico te gustaría
-                    desarrollar tu proyecto
-                </div>
-                <div class="col-2 my-5 white">
-                    <h1>3.</h1>
-                </div>
-                <div class="col-10 my-5 white">
-                    Sube los documentos
-                    del proyecto
-                </div>
-                <div class="col-2 my-5 white">
-                    <h1>4.</h1>
-                </div>
-                <div class="col-10 my-5 white">
-                    Posteriormente te
-                    contactaremos.
+                <div class="col-md-3 col-12 my-md-0 my-3">
+                    <div class="col-12">
+                        <img src="assets/tecontactaremos.png" width="90px" alt="">
+                    </div>
+                    <div class="col-12">
+                        <h1 style="font-size: 80px; color: white;"><strong> > </strong></h1>
+                    </div>
+                    <div class="col-12">
+                        <h5 style="color: white;">4. Posteriormente te
+                            contactaremos.
+                        </h5>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-9 p-0 bck-image-form">
-            <div class="col-8 offset-2 grey my-5">
+
+        <div class="col-12 p-0 bck-image-form">
+            <div class="col-md-8 col-12 offset-md-2 grey my-5">
                 <form [formGroup]="firstFormGroup" (ngSubmit)="submit()">
                     <div class="row">
                         <div class="col-12 text-center p-1">
-                            <h3 style="color: #009391;"><strong>Regístrate</strong></h3>
+                            <h3 style="color: #ff7a00;"><strong>Regístrate</strong></h3>
                         </div>
-                        <div class="col-6 text-center">
+                        <div class="col-md-6 col-12 text-center">
                             <mat-form-field appearance="fill">
-                                <p style="color: #009391;" class="text-center"><strong>Nombre</strong></p>
+                                <p style="color: #ff7a00;" class="text-center"><strong>Nombre</strong></p>
                                 <input class="input" matInput formControlName="name" [(ngModel)]="form.name" required>
                                 <div *ngIf="firstFormGroup.controls.name.invalid && (firstFormGroup.controls.name.dirty || firstFormGroup.controls.name.touched)" class="alert alert-danger">
                                     <div *ngIf="firstFormGroup.controls.name.errors?.required">
@@ -57,9 +82,9 @@
                                 </div>
                             </mat-form-field>
                         </div>
-                        <div class="col-6 text-center">
+                        <div class="col-md-6 col-12 text-center">
                             <mat-form-field appearance="fill">
-                                <p style="color: #009391;" class="text-center"><strong>Apellidos</strong></p>
+                                <p style="color: #ff7a00;" class="text-center"><strong>Apellidos</strong></p>
                                 <input class="input" matInput formControlName="surname" [(ngModel)]="form.surname" required>
                                 <div *ngIf="firstFormGroup.controls.surname.invalid && (firstFormGroup.controls.surname.dirty || firstFormGroup.controls.surname.touched)" class="alert alert-danger">
                                     <div *ngIf="firstFormGroup.controls.surname.errors?.required">
@@ -68,9 +93,9 @@
                                 </div>
                             </mat-form-field>
                         </div>
-                        <div class="col-6 text-center">
+                        <div class="col-md-6 col-12 text-center">
                             <mat-form-field appearance="fill">
-                                <p style="color: #009391;" class="text-center"><strong>Correo electrónico</strong></p>
+                                <p style="color: #ff7a00;" class="text-center"><strong>Correo electrónico</strong></p>
                                 <input class="input" matInput formControlName="email" [(ngModel)]="form.email" required>
                                 <div *ngIf="firstFormGroup.controls.email.invalid && (firstFormGroup.controls.email.dirty || firstFormGroup.controls.email.touched)" class="alert alert-danger">
                                     <div *ngIf="firstFormGroup.controls.email.errors?.required">
@@ -79,9 +104,9 @@
                                 </div>
                             </mat-form-field>
                         </div>
-                        <div class="col-6 text-center">
+                        <div class="col-md-6 col-12 text-center">
                             <mat-form-field appearance="fill">
-                                <p style="color: #009391;" class="text-center"><strong>Número teléfonico</strong></p>
+                                <p style="color: #ff7a00;" class="text-center"><strong>Número teléfonico</strong></p>
                                 <input class="input" matInput formControlName="phone" [(ngModel)]="form.phone" required>
                                 <div *ngIf="firstFormGroup.controls.phone.invalid && (firstFormGroup.controls.phone.dirty || firstFormGroup.controls.phone.touched)" class="alert alert-danger">
                                     <div *ngIf="firstFormGroup.controls.phone.errors?.required">
@@ -90,9 +115,9 @@
                                 </div>
                             </mat-form-field>
                         </div>
-                        <div class="col-6 text-center">
+                        <div class="col-md-6 col-12 text-center">
                             <mat-form-field appearance="fill">
-                                <p style="color: #009391;" class="text-center"><strong>Destino turístico</strong></p>
+                                <p style="color: #ff7a00;" class="text-center"><strong>Destino turístico</strong></p>
                                 <input class="input" matInput formControlName="turisticLocation"
                                     [(ngModel)]="form.turisticLocation" required>
                                     <div *ngIf="firstFormGroup.controls.turisticLocation.invalid && (firstFormGroup.controls.turisticLocation.dirty || firstFormGroup.controls.turisticLocation.touched)" class="alert alert-danger">
@@ -102,12 +127,12 @@
                                     </div>
                             </mat-form-field>
                         </div>
-                        <div class="col-6 text-center mt-2">
+                        <div class="col-md-6 col-12 text-center mt-2">
                             <mat-form-field appearance="fill">
                                 <mat-label></mat-label>
-                                <p style="color: #009391;" class="text-center"><strong>Tipo de proyecto</strong></p>
+                                <p style="color: #ff7a00;" class="text-center"><strong>Tipo de proyecto</strong></p>
                                 <mat-select [(ngModel)]="form.selected" formControlName="selected">
-                                    <mat-option value="Fondea">Fondea</mat-option>
+                                    <mat-option value="Impulsa">Impulsa</mat-option>
                                     <mat-option value="Construye">Construye</mat-option>
                                     <mat-option value="Remodela">Remodela</mat-option>
                                 </mat-select>
@@ -115,7 +140,7 @@
                         </div>
                         <div class="col-12 text-center mb-3">
                             <mat-form-field appearance="fill">
-                                <p style="color: #009391;" class="text-center"><strong>Descripción del proyecto</strong>
+                                <p style="color: #ff7a00;" class="text-center"><strong>Descripción del proyecto</strong>
                                 </p>
                                 <input class="input" matInput formControlName="description"
                                     [(ngModel)]="form.description" required>
@@ -127,7 +152,7 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <p style="color: #009391; font-size: 15px;">Sube aquí tus documentos, mientras más
+                            <p style="color: #ff7a00; font-size: 15px;">Sube aquí tus documentos, mientras más
                                 documentos tengas mas rápido será el proceso</p>
                         </div>
                         <div class="col-12 mb-2">
@@ -138,39 +163,45 @@
                                     {{percentage}}%</div>
                             </div>
                         </div>
-                        <div class="col-4">
-                            <label><strong style="color: #009391;">Proyecto ejecutivo</strong></label>
+                        <div class="col-4 ">
+                            <label><strong style="color: #ff7a00;">Proyecto arquitectonico</strong></label>
                         </div>
                         <div class="col-8">
-                            <input type="file" (change)="selectFileProyect($event)">
+                            <input class="hidden" type="file" (change)="selectFileProyect($event)">
+                        </div>
+                        <div class="col-4 my-3">
+                            <label><strong style="color: #ff7a00;">Corrida financiera</strong></label>
+                        </div>
+                        <div class="col-8 my-3">
+                            <input class="hidden" type="file" (change)="selectFileFinance($event)">
                         </div>
                         <div class="col-4">
-                            <label><strong style="color: #009391;">Brochure</strong></label>
+                            <label><strong style="color: #ff7a00;">Estudio de mercado</strong></label>
                         </div>
                         <div class="col-8">
-                            <input type="file" (change)="selectFileBrochure($event)">
+                            <input class="hidden" type="file" (change)="selectFileMerc($event)">
+                        </div>
+                        <div class="col-4 my-3">
+                            <label><strong style="color: #ff7a00;">Plan de negociós</strong></label>
+                        </div>
+                        <div class="col-8 my-3">
+                            <input class="hidden" type="file" (change)="selectFilePlan($event)">
+                        </div>
+                        <div class="col-4 mb-3">
+                            <label><strong style="color: #ff7a00;">Brochure</strong></label>
+                        </div>
+                        <div class="col-8 mb-3">
+                            <input class="hidden" type="file" (change)="selectFileBrochure($event)">
                         </div>
                         <div class="col-4">
-                            <label><strong style="color: #009391;">Corrida financiera</strong></label>
-                        </div>
-                        <div class="col-8">
-                            <input type="file" (change)="selectFileFinance($event)">
-                        </div>
-                        <div class="col-4">
-                            <label><strong style="color: #009391;">Estudio de mercado</strong></label>
-                        </div>
-                        <div class="col-8">
-                            <input type="file" (change)="selectFileMerc($event)">
-                        </div>
-                        <div class="col-4">
-                            <label><strong style="color: #009391;">Fotos</strong></label>
+                            <label><strong style="color: #ff7a00;">Fotos  </strong></label>
                             <label>
-                                <p style="font-size: 10px; color: #009391;">* Sube tus fotos en una carpeta comprimida
+                                <p class="mx-2" style="font-size: 10px; color: #ff7a00;">* Sube tus fotos en una carpeta comprimida
                                 </p>
                             </label>
                         </div>
                         <div class="col-8">
-                            <input type="file" (change)="selectFilePhoto($event)">
+                            <input class="hidden" type="file" (change)="selectFilePhoto($event)">
                         </div>
 
                         <div class="text-center my-3">
@@ -178,7 +209,7 @@
                                 (click)="upload()"><strong>Regístrate</strong></button>
                         </div>
                         <div class="col-12 text-center" *ngIf="submitted == true">
-                            <h5 style="color: #009391;">Se ha registrado correctamente, nos pondremos en contacto con usted a la brevedad</h5>
+                            <h5 style="color: #ff7a00;">Se ha registrado correctamente, nos pondremos en contacto con usted a la brevedad</h5>
                         </div>
                     </div>
                 </form>

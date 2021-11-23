@@ -1,35 +1,37 @@
-<div class="container">
+<div class="container-fluid px-0">
   <div class="row">
     <div class="col-12">
+      
+      
       <nav class="navbar navbar-expand-lg navbar-light bg-light p-0">
-        <div class="nav container">
-          <a class="navbar-brand ms-1" href="#">
+        <div class="nav container-fluid">
+          <a class="navbar-brand mx-5" href="#">
             <img src="assets/monific-blanco.png" alt="" width="100" height="24">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true"
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse d-flex" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item ">
-                <a class="nav-link" aria-current="page" [routerLink]="'convocatoria'">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item mx-2">
+                <a class="nav-link" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" aria-current="page" [routerLink]="'convocatoria'">
                   <h5>Convocatoria</h5>
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" [routerLink]="'dinamica'">
-                  <h5>Dinamica</h5>
+              <li class="nav-item mx-2">
+                <a class="nav-link" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" [routerLink]="'dinamica'">
+                  <h5>Dinámica</h5>
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" [routerLink]="'registro'">
+              <li class="nav-item mx-2">
+                <a class="nav-link" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" [routerLink]="'registro'">
                   <h5>Registro</h5>
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" [routerLink]="'bases'">
+              <li class="nav-item mx-2">
+                <a class="nav-link" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" [routerLink]="'bases'">
                   <h5>Bases del concurso</h5>
                 </a>
               </li>
@@ -38,29 +40,35 @@
         </div>
       </nav>
 
-
-      <div class="bck-image">
-        <div class="row">
-          <div class="col-md-3 offset-md-3 col-xs-12 text-center my-4 p-0">
-            <p style="font-size: 80px; color: white"><strong>1 er</strong></p>
-          </div>
-          <div class="col-md-6 col-xs-8 offset-xs-4 my-5">
-            <h2 style="color: white;">Concurso de Fondeo</h2>
-            <h2 style="color: white;">para solicitantes</h2>
-          </div>
-          <div class="col-md-4 text-center">
-            <h3 style="color: white;">Fondea</h3>
-          </div>
-          <div class="col-md-4 text-center">
-            <h3 style="color: white;">Construye</h3>
-          </div>
-          <div class="col-md-4 text-center">
-            <h3 style="color: white;">Remodela</h3>
-          </div>
-          <div class=" col-4 offset-4 text-center my-4">
-            <button class="btn" style="color: white;" [routerLink]="'registro'"><strong>Regístrate</strong></button>
-          </div>
+    <div class="bck-image">
+      <div class="row">
+        <div class="col-md-5 text-center text-md-end mt-md-5">
+          <h1 style="font-size: 80px; color: #ff7a00; padding-right: 10px;" ><strong>01</strong></h1>
+        </div>
+        <div class="col-md-7 text-md-start text-center mt-md-5 p-0">
+          <h5 class="mt-md-3" style="color: white; font-weight: bold;">CONCURSO DE INVERSIÓN INMOBILIARIA</h5>
+          <h5 style="color: white; font-weight: bold;">PARA DESARROLLOS TURÍSTICOS</h5>
+        </div>
+        <div class="col-12 text-center d-xl-block d-none">
+          <hr style="color: #ff7a00; margin: auto;" class="line">
+        </div>
+        <div class="col-md-6 col-12 text-md-end text-center mt-5">
+          <a class="navbar-brand mx-5" href="#">
+            <img class="moni" src="assets/monific-blanco.png" alt="">
+          </a>
+        </div>
+        <div class="col-md-6 col-12 text-md-start text-center">
+          <a class="navbar-brand mx-5" href="https://inmobiliare.com/" target="_blank">
+            <img class="inmo" src="assets/inmobiliare.png" alt="">
+          </a>
+        </div>
+        <div class="col-lg-2 offset-lg-5 col-12 text-center my-5">
+          <button class="btn mb-1" style="color: white;" [routerLink]="'registro'">
+            <h4><strong>Regístrate</strong></h4>
+          </button>
         </div>
       </div>
-      <router-outlet></router-outlet>
-      <div>
+    </div>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+    <div>

@@ -29,9 +29,9 @@
  }
 
  .btn {
-    border          : solid #009391;
+    border          : solid #ff7a00;
     border-radius   : 15px;
-    background-color: #009391;
+    background-color: #ff7a00;
     width           : 50%;
     height          : 40px;
     text-align      : center;
@@ -43,10 +43,14 @@
 }
 
 .banner{
-    background-color: #009391;
+    background-color: #ff7a00;
 }
 
 
 .white{
     color: white;
 }
+
+input[type=file].hidden {
+    color: #ff7a00;
+  }
